@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 offset-md-2">
+              <h3>Select Role</h3>
+              <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"novalidate>
+            		<div *ngFor="let role of roles">
+                 <div class="form-group">
+                     <input type="checkbox"  name="title['{{role.id}}']" [(ngModel)]="model.title" #title="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"  />  {{role.title}}
+                  </div>
+                </div> 
+
+             <!--    <section class="checkbox-section">
+  <mat-checkbox [(ngModel)]="bChecked" (change)="onCheckboxChagen($event, 'Blogs')">Blogs</mat-checkbox>
+  <mat-checkbox [(ngModel)]="wChecked" (change)="onCheckboxChagen($event, 'Web')">Web</mat-checkbox>
+  <mat-checkbox [(ngModel)]="oChecked" (change)="onCheckboxChagen($event, 'Online News')">Online News</mat-checkbox>
+  </section> -->
+                  <div class="form-group">
+                      <button class="btn btn-primary">Register</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+

@@ -1,0 +1,20 @@
+<div class="col-md-6 user-container">
+  <h2 style="margin: auto"> User Details</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td class="hidden">{{user.id}}</td>
+      <td>{{user.email}}</td>
+      <td>
+        <button class="btn btn-success" (click)="userRole(user)" style="margin-left: 20px;"> Add Role</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
